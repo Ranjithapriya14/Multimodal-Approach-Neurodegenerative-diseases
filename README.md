@@ -245,13 +245,13 @@ Neurodegenerative-Disease-Detection/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Neurodegenerative-Disease-Detection.git
+git clone https://github.com/Ranjithapriya14/Multimodal-Approach-Neurodegenerative-diseases.git
 ```
 
 ### Navigate to Project Directory
 
 ```bash
-cd Neurodegenerative-Disease-Detection
+cd Ranjithapriya14/Multimodal-Approach-Neurodegenerative-diseases
 ```
 
 ### Install Dependencies
@@ -328,5 +328,5 @@ Passionate about Artificial Intelligence, Machine Learning, Healthcare Analytics
 
 ### Connect with Me
 
-* LinkedIn: Add your LinkedIn profile link
-* GitHub: Add your GitHub profile link
+* LinkedIn: www.linkedin.com/in/ranjitha-priya-g-071880293
+* GitHub: https://github.com/Ranjithapriya14
