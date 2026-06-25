@@ -1,125 +1,332 @@
-Neurodegenerative Disease Detection Using Spiral Images and Voice Analysis
-Overview
+# 🧠 Neurodegenerative Disease Detection Using Spiral Images and Voice Analysis
 
-This project is an AI-powered healthcare system designed to detect Parkinson's Disease using:
+## 📌 Overview
 
-Spiral Drawing Images
-Voice Audio Analysis
+Neurodegenerative diseases such as Parkinson's Disease can significantly affect motor control, handwriting patterns, and vocal characteristics. Early detection plays a crucial role in improving patient care and treatment outcomes.
 
-The system utilizes Deep Learning CNN models to classify patient conditions and provide prediction results through a Flask-based web application.
+This project presents an **AI-powered healthcare diagnostic system** that leverages **Deep Learning and Computer Vision techniques** to detect Parkinson's Disease through:
 
-Features
-User Registration and Login
-Admin Dashboard
-Spiral Image Analysis
-Voice Audio Analysis
-CNN-based Prediction
-Prediction Confidence Score
-Report Management
-MySQL Database Integration
-Technologies Used
-Frontend
-HTML
-CSS
-Bootstrap
-JavaScript
-Backend
-Python
-Flask
-Database
-MySQL
-Machine Learning
-TensorFlow
-Keras
-CNN
-Librosa
-Dataset
-Image Dataset
-Parkinson Spiral Drawings
-Healthy Spiral Drawings
-Audio Dataset
-Parkinson Voice Samples
-Healthy Voice Samples
-System Architecture
-User uploads Spiral Image
-CNN model predicts Parkinson/Healthy
-User uploads Voice Sample
-Audio converted to Mel Spectrogram
-CNN model predicts Parkinson/Healthy
-Results stored in MySQL database
-Model Performance
-Model	Accuracy
-Spiral Image CNN	XX%
-Voice CNN	XX%
-Installation
-git clone https://github.com/yourusername/Parkinson-Disease-Detection-Using-Spiral-Images-and-Voice-Analysis.git
+* ✍️ Spiral Drawing Image Analysis
+* 🎙️ Voice Audio Analysis
 
-cd Parkinson-Disease-Detection-Using-Spiral-Images-and-Voice-Analysis
+The system integrates Convolutional Neural Networks (CNNs) with a Flask-based web application to provide automated predictions, confidence scores, and patient report management.
 
+---
+
+## 🎯 Objectives
+
+* Detect Parkinson's Disease using spiral handwriting patterns.
+* Analyze voice recordings to identify vocal biomarkers associated with Parkinson's Disease.
+* Provide a user-friendly web interface for patients and healthcare professionals.
+* Store prediction reports securely for future analysis and monitoring.
+
+---
+
+## 🚀 Key Features
+
+### 👤 User Module
+
+* User Registration & Authentication
+* Secure Login System
+* Spiral Image Upload
+* Voice Sample Upload
+* Instant Prediction Results
+* Confidence Score Display
+* Personal Prediction History
+
+### 👨‍💼 Admin Module
+
+* Admin Dashboard
+* User Management
+* Prediction Report Monitoring
+* Disease Detection Statistics
+
+### 🤖 AI Prediction Engine
+
+* CNN-based Spiral Image Classification
+* CNN-based Voice Signal Classification
+* Mel-Spectrogram Audio Processing
+* Real-time Prediction Generation
+* Confidence Score Calculation
+
+### 🗄️ Database Management
+
+* MySQL Integration
+* User Data Storage
+* Prediction Report Storage
+* Historical Result Tracking
+
+---
+
+## 🏗️ System Architecture
+
+```text
+User Input
+     │
+     ├── Spiral Image Upload
+     │         │
+     │         ▼
+     │   CNN Image Model
+     │         │
+     │         ▼
+     │   Prediction Result
+     │
+     └── Voice Audio Upload
+               │
+               ▼
+      Mel Spectrogram Conversion
+               │
+               ▼
+         CNN Audio Model
+               │
+               ▼
+         Prediction Result
+
+                    ▼
+             Flask Backend
+
+                    ▼
+              MySQL Database
+
+                    ▼
+           Report Generation
+```
+
+---
+
+## 💻 Technology Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* Bootstrap
+* JavaScript
+
+### Backend
+
+* Python
+* Flask Framework
+
+### Database
+
+* MySQL
+
+### Artificial Intelligence & Machine Learning
+
+* TensorFlow
+* Keras
+* Convolutional Neural Networks (CNN)
+* NumPy
+* Librosa
+* OpenCV
+
+### Development Tools
+
+* PyCharm
+* Git
+* GitHub
+
+---
+
+## 📂 Dataset Information
+
+### Spiral Image Dataset
+
+The image dataset contains spiral drawings categorized into:
+
+* Healthy Subjects
+* Parkinson's Disease Patients
+
+### Voice Audio Dataset
+
+The audio dataset contains voice recordings categorized into:
+
+* Healthy Individuals
+* Parkinson's Disease Patients
+
+Audio samples are transformed into **Mel-Spectrograms** before being fed into the CNN model for classification.
+
+---
+
+## 🧠 Deep Learning Models
+
+### Spiral Image Classification Model
+
+* Input Size: 200 × 200 RGB Images
+* CNN Architecture
+* Batch Normalization
+* Max Pooling Layers
+* Dropout Regularization
+* Softmax Classification
+
+### Voice Analysis Model
+
+* Audio Resampling using Librosa
+* Mel-Spectrogram Feature Extraction
+* Spectrogram Resizing
+* CNN-Based Audio Classification
+* Softmax Output Layer
+
+---
+
+## 🔄 Workflow
+
+### Spiral Image Analysis
+
+1. User uploads a spiral drawing image.
+2. Image preprocessing is performed.
+3. CNN model extracts visual features.
+4. Disease prediction is generated.
+5. Confidence score is displayed.
+6. Result is stored in the database.
+
+### Voice Analysis
+
+1. User uploads a voice recording.
+2. Audio is converted into a Mel-Spectrogram.
+3. CNN model extracts acoustic features.
+4. Prediction is generated.
+5. Confidence score is displayed.
+6. Result is stored in the database.
+
+---
+
+## 📊 Model Output
+
+The system predicts:
+
+### Image Model
+
+* Healthy
+* Parkinson's Disease
+
+### Voice Model
+
+* Healthy
+* Parkinson's Disease
+
+Output includes:
+
+* Predicted Class
+* Confidence Score (%)
+* Date of Prediction
+* Prediction Type (Image/Audio)
+
+---
+
+## 📁 Project Structure
+
+```text
+Neurodegenerative-Disease-Detection/
+│
+├── DataSet/
+├── Soundset/
+├── Model/
+│   └── pdmodel.h5
+│
+├── static/
+├── templates/
+│
+├── App.py
+├── CNNPar.py
+├── Model.py
+├── Predict.py
+├── NewsoundPredict.py
+│
+├── parkinsonspiraldudiodb.sql
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/yourusername/Neurodegenerative-Disease-Detection.git
+```
+
+### Navigate to Project Directory
+
+```bash
+cd Neurodegenerative-Disease-Detection
+```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
+### Configure Database
+
+1. Open MySQL.
+2. Create a database:
+
+```sql
+CREATE DATABASE parkinsonspiraldudiodb;
+```
+
+3. Import:
+
+```text
+parkinsonspiraldudiodb.sql
+```
+
+### Run Application
+
+```bash
 python App.py
-Future Enhancements
-Real-time Voice Recording
-Explainable AI (XAI)
-Mobile Application
-Cloud Deployment
-Doctor Recommendation System
-Author
+```
 
-Ranjithapriya
+Open:
 
-Step 4: Upload to GitHub
-Open Terminal
-git init
+```text
+http://127.0.0.1:5000/
+```
 
-git add .
+---
 
-git commit -m "Initial Commit"
+## 🔮 Future Enhancements
 
-git branch -M main
+* Real-Time Voice Recording
+* Explainable AI (XAI)
+* Mobile Application Development
+* Cloud Deployment (AWS/Azure)
+* Doctor Recommendation System
+* Medical Report Generation
+* Multi-Disease Detection Framework
+* REST API Integration
 
-git remote add origin https://github.com/YourUsername/RepositoryName.git
+---
 
-git push -u origin main
-Step 5: Add Project to LinkedIn
+## 🌟 Project Highlights
 
-Go to:
+✔ Deep Learning-Based Healthcare Application
 
-LinkedIn
+✔ Dual-Modal Disease Detection (Image + Audio)
 
-Profile → Add Profile Section → Projects
+✔ CNN Architecture for Medical Prediction
 
-Fill:
+✔ Flask Web Application Development
 
-Project Name
-AI-Based Parkinson Disease Detection Using Spiral Images and Voice Analysis
-Duration
-Jan 2026 – Jun 2026
-Associated With
-B.E Computer Science and Engineering
-Description
-Developed an AI-powered healthcare web application for early Parkinson’s Disease detection using both spiral drawing images and voice audio analysis.
+✔ MySQL Database Integration
 
-Implemented Convolutional Neural Networks (CNN) with TensorFlow and Keras for image and audio classification. Audio samples were processed into Mel Spectrograms using Librosa for deep learning prediction.
+✔ End-to-End AI Deployment Workflow
 
-Designed a Flask-based web platform with user authentication, prediction modules, report generation, and MySQL database integration.
+---
 
-Technologies Used:
-• Python
-• Flask
-• TensorFlow
-• Keras
-• CNN
-• Librosa
-• MySQL
-• HTML/CSS
-• Bootstrap
-• JavaScript
+## 👩‍💻 Author
 
-Key Features:
-• Spiral Image Analysis
-• Voice Analysis
-• Prediction Confidence Score
-• User & Admin Dashboard
-• Report Management
+**Ranjithapriya**
+
+B.E. Computer Science and Engineering
+
+Passionate about Artificial Intelligence, Machine Learning, Healthcare Analytics, and Full-Stack Development.
+
+### Connect with Me
+
+* LinkedIn: Add your LinkedIn profile link
+* GitHub: Add your GitHub profile link
